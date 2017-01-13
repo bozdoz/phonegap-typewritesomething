@@ -7,10 +7,10 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-statusbar": {
+        "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "com.phonegap.typewritesomething"
         },
-        "cordova-plugin-splashscreen": {
+        "cordova-plugin-statusbar": {
             "PACKAGE_NAME": "com.phonegap.typewritesomething"
         }
     },
