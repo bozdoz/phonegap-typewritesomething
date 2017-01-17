@@ -19,6 +19,8 @@
     
     <plugin name="cordova-plugin-splashscreen" source="npm" spec="~3.2.1" />
     <plugin name="cordova-plugin-statusbar" source="npm" spec="~2.1.2" />
+    <plugin name="cordova-plugin-shake" source="npm" spec="~0.5.4" />
+    <plugin name="cordova-plugin-device-motion" source="npm" spec="~1.2.3" />
 
     <platform name="android">
         <icon density="ldpi" src="res/icon/android/drawable-ldpi-icon.png" />
