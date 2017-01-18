@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.phonegap.typewritesomething" version="0.1.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Typewrite Something!</name>
+<widget id="com.phonegap.typewritesomething" version="0.1.2" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Typewrite Something</name>
     <description>
         A minimalistic typewriter simulator to help you write more creatively!
     </description>
