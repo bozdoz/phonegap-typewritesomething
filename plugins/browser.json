@@ -15,6 +15,9 @@
         },
         "cordova-plugin-shake": {
             "PACKAGE_NAME": "com.phonegap.typewritesomething"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.phonegap.typewritesomething"
         }
     },
     "dependent_plugins": {
