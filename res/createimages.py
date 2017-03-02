@@ -37,8 +37,8 @@ def replaceScreen (the_dir) :
         width, height = image_file.size
         size = '%dx%d' % image_file.size
         icon_size = '%dx%d' % (
-            int(width*0.6),
-            int(height*0.6),
+            int(width*0.3),
+            int(height*0.3),
             )
         filename = filename.replace('drawable', 'tws')
         filename = filename.replace('Default', 'tws')
@@ -58,7 +58,7 @@ print 'SVG file : %s' % svg_file
 
 # replaceIcons(icon_android)
 # replaceIcons(icon_ios)
-# replaceScreen(screen_android)
-# replaceScreen(screen_ios)
+replaceScreen(screen_android)
+replaceScreen(screen_ios)
 
 print 'If nothing happened make sure you have an svg in the same directory, and uncomment function calls above'
