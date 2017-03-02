@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Typewrite Something</title>
+
+	<!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#f6f3e3">
+
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com * ws:;style-src 'self' 'unsafe-inline' data: blob:;media-src *;connect-src ws://localhost:* http://localhost:*;script-src 'unsafe-inline' http://localhost:* * 'unsafe-eval' data: blob:;img-src http://localhost:* 'self' data: content:;">
+
+	<link rel="icon" href="typewritesomething/favicon.ico" />
+	<link rel="stylesheet" href="typewritesomething/style.css" />
+</head>
+
+<body>
+	<main role="main" class="main" id="main">
+		<div id="splash" class="flex-column">
+			<div class="flex">
+				<div class="splash-title">
+					<h1>TYPEWRITE SOMETHING</h1>
+					<h2>A simple typewriter simulator</h2>
+				</div>
+			</div>
+			<div class="flex">
+				<div class="actions">
+					<div class="flex-column">
+						<button type="button" onclick="startTyping()" role="button">Start Typing</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="container">
+			<canvas id="text-canvas"></canvas>
+			<canvas id="cursor-canvas"></canvas>
+			
+			<!-- prevent Chrome autocomplete -->
+			<input type="text" style="display:none">
+
+			<!-- password field disables swiping on mobile
+				and fixes keyup events -->
+			<input 
+				id="cursor-input" 
+				name="this-is-no-password"
+				type="password"
+				autocomplete="nope" />
+		</div>
+	</main>
+
+	<script src="cordova.js"></script>
+	<script src="script.js"></script>
+	<script src="typewritesomething/script.js"></script>
+</body>
+</html>
