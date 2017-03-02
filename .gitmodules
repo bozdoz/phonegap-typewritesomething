@@ -1,3 +1,3 @@
 [submodule "www/typewritesomething"]
 	path = www/typewritesomething
-	url = git@github.com:bozdoz/typewritesomething.git
+	url = https://github.com/bozdoz/typewritesomething.git
