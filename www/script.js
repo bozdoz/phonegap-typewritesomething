@@ -1,6 +1,10 @@
 var keypress_audio = new makeMultiAudio('typewritesomething/inc/keypress.mp3'),
     newline_audio = new makeMultiAudio('typewritesomething/inc/return.mp3');
 
+document.addEventListener('deviceready', function () {
+	navigator.splashscreen.hide();
+});
+
 function makeMultiAudio (src) {
     var output = [],
          current = 0,
