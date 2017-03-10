@@ -1,19 +1,28 @@
-var keypress_audio = new makeMultiAudio('typewritesomething/inc/keypress.mp3'),
-    newline_audio = new makeMultiAudio('typewritesomething/inc/return.mp3');
+/*
+
+Phonegap specific scripts to manipulate/use
+the typewriter app
+
+*/
+
+var keypress_audio = new makeMultiAudio('typewritesomething/inc/keypress.mp3', 5),
+    newline_audio = new makeMultiAudio('typewritesomething/inc/return.mp3', 2);
 
 document.addEventListener('deviceready', function () {
 	navigator.splashscreen.hide();
 });
 
-function makeMultiAudio (src) {
+function makeMultiAudio (src, instances) {
     var output = [],
-         current = 0,
-         num = 5;
+        current = 0,
+        num = instances || 5;
     for (var i = 0; i < num; i++) {
         output.push(new Audio(src));
     }
     this.play = function () {
-        output[current++ % num].play();
+        var audio = output[current++ % num];
+        audio.currentTime = 0;
+        audio.play();
     };
 }
 
