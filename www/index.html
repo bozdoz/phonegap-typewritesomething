@@ -17,6 +17,21 @@
 
 <body>
 	<main role="main" class="main" id="main">
+		<div id="container">
+			<canvas id="text-canvas"></canvas>
+			<canvas id="cursor-canvas"></canvas>
+			
+			<!-- prevent Chrome autocomplete -->
+			<input type="text" style="display:none">
+
+			<!-- password field disables swiping on mobile
+				and fixes keyup events -->
+			<input 
+				id="cursor-input" 
+				name="this-is-no-password"
+				type="password"
+				autocomplete="nope" />
+		</div>
 		<div id="splash" class="flex-column">
 			<div id="splash-section-1" class="flex first">
 				<div class="splash-title">
@@ -27,8 +42,7 @@
 			<div id="splash-section-2" class="flex second">
 				<div class="actions">
 					<div class="flex-column">
-						<button type="button" onclick="startTyping()" role="button">Start Simulator</button>
-						<button type="button" onclick="pasteText()" role="button">Paste Text</button>
+						<a href="#typing">Start Simulator</a><a href="#paste">Paste Text</a>
 					</div>
 				</div>
 			</div>
@@ -47,26 +61,11 @@
 							<button type="submit" role="button">Typewrite It</button>
 						</div>
 						<div class="flex">
-							<button id="paste-cancel" type="button" role="button">Cancel</button>
+							<a href="#">Cancel</a>
 						</div>
 					</div>
 				</form>
 			</div>
-		</div>
-		<div id="container">
-			<canvas id="text-canvas"></canvas>
-			<canvas id="cursor-canvas"></canvas>
-			
-			<!-- prevent Chrome autocomplete -->
-			<input type="text" style="display:none">
-
-			<!-- password field disables swiping on mobile
-				and fixes keyup events -->
-			<input 
-				id="cursor-input" 
-				name="this-is-no-password"
-				type="password"
-				autocomplete="nope" />
 		</div>
 	</main>
 

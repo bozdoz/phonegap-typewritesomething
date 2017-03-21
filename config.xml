@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.phonegap.typewritesomething" version="0.2.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.phonegap.typewritesomething" version="0.3.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Typewrite Something</name>
     <description>
         A minimalistic typewriter simulator to help you write more creatively!
@@ -24,15 +24,24 @@
     <preference name="SplashScreenBackgroundColor" value="#f6f3e3" />
     <preference name="ShowSplashScreen" value="true" />
     <preference name="FadeSplashScreenDuration" value="300" />
-    <preference name="SplashScreenDelay" value="4000" />
+    <preference name="SplashScreenDelay" value="2000" />
     <preference name="ShowSplashScreenSpinner" value="false" />
+    <preference name="Fullscreen" value="true" />
+
+    <gap:config-file platform="android" parent="/manifest">
+        <application android:theme="@android:style/Theme.NoTitleBar" >
+            <activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            </activity>
+        </application>
+    </gap:config-file>
     
-    <icon src="www/icon.png" />
-    <splash src="www/splash.png" />
+    <icon src="www/img/logo.png" />
+    <splash src="www/img/splash.png" />
 
     <platform name="browser">
-        <icon src="www/icon.png" />
-        <preference name="SplashScreen" value="splash.png" />
+        <preference name="ShowSplashScreen" value="true" />
+        <icon src="www/img/logo.png" />
+        <splash src="www/img/splash.png" />
     </platform>
 
     <platform name="android">
@@ -83,6 +92,24 @@
         <splash height="960" platform="ios" src="res/screen/ios/tws@2x~iphone.png" width="640" />
         <splash height="480" platform="ios" src="res/screen/ios/tws~iphone.png" width="320" />
     </platform>
+
+    <platform name="wp8">
+        <icon   src="res/icon/wp8/ApplicationIcon.png"   platform="wp8" width="99"  height="99" />
+        <icon   src="res/icon/wp8/Background.png"        platform="wp8" width="159" height="159" />
+        <splash src="res/screen/wp8/screen-portrait.jpg" platform="wp8" width="768" height="1280" />
+    </platform>
+
+    <platform name="windows">
+        <icon src="res/icon/windows/StoreLogo.png"         target="StoreLogo" />
+        <icon src="res/icon/windows/Square30x30Logo.png"   target="Square30x30Logo" />
+        <icon src="res/icon/windows/Square44x44Logo.png"   target="Square44x44Logo" />
+        <icon src="res/icon/windows/Square70x70Logo.png"   target="Square70x70Logo" />
+        <icon src="res/icon/windows/Square71x71Logo.png"   target="Square71x71Logo" />
+        <icon src="res/icon/windows/Square150x150Logo.png" target="Square150x150Logo" />
+        <icon src="res/icon/windows/Square310x310Logo.png" target="Square310x310Logo" />
+        <icon src="res/icon/windows/Wide310x150Logo.png"   target="Wide310x150Logo" />
+    </platform>
+
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
